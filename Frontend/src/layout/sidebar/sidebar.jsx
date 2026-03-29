@@ -28,19 +28,7 @@ function Sidebar() {
 
       {/* Menu */}
       <nav className="mt-6 space-y-2 px-2">
-        {/* Home */}
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            `flex items-center gap-3 p-3 rounded-lg ${
-              isActive ? "bg-blue-500" : "hover:bg-gray-700"
-            }`
-          }
-        >
-          <Home size={20} />
-          <span className={`${!open && "hidden"}`}>Home</span>
-        </NavLink>
-
+       
         {/* Live Verify */}
         <NavLink
           to="/live"

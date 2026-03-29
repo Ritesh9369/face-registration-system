@@ -2,9 +2,11 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Layout from "./layout/Layout";
-// import Home from "./pages/Home";
-// import Camera from "./pages/Camera";
-// import Login from "./pages/Login";
+
+// Pages import
+import LiveVerify from "./pages/Live-Verify/Live-Verify";
+import Register from "./pages/Register/Register";
+import Verify from "./pages/Verify/Verify";
 
 function App() {
   return (
@@ -12,9 +14,13 @@ function App() {
       <Routes>
         {/* Layout wrap */}
         <Route path="/" element={<Layout />}>
-          {/* <Route index element={<Home />} /> */}
-          {/* <Route path="camera" element={<Camera />} />
-          <Route path="login" element={<Login />} /> */}
+          {/* Default Page */}
+          <Route index element={<LiveVerify />} />
+
+          {/* Routes */}
+          <Route path="live" element={<LiveVerify />} />
+          <Route path="register" element={<Register />} />
+          <Route path="verify" element={<Verify />} />
         </Route>
       </Routes>
     </BrowserRouter>
